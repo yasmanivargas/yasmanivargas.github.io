@@ -5,3 +5,6 @@ Soy investigador en el Laboratorio de Datos del Banco Mundial y docente de Econo
 Actualmente curso la Maestría en Ciencias de la Computación en Cornell Tech. Obtuve el Bachillerato en Economía por la PUCP y la Maestría en Economía Cuantitativa por la Universidad de Múnich. Durante mi segundo año, fui investigador visitante en el Laboratorio de Ciencia de la Innovación de Harvard (LISH). También me desempeñé como asistente de investigación en Yale, el Instituto Max Planck de Innovación y Competencia (MPI) y MIT Sloan.
 
 Consulta mi **[currículum vitae](#)** para más información.
+
+## Documentos de trabajo
+---
