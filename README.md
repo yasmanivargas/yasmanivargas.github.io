@@ -1,8 +1,8 @@
 ## Acerca de mí
 
-Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economista por la Universidad Nacional del Altiplano, donde también obtuve la Maestría en Proyectos de Inversión y la Segunda Especialidad en Formulación y Evaluación de Políticas Públicas. Mi formación integra economía, territorio y gestión pública, permitiéndome analizar y diseñar soluciones para el desarrollo sostenible y la mejora de la acción estatal.
+Soy docente en la Universidad Nacional del Altiplano (UNA), Universidad Peruana Unión (UPeU) y consultor especializado en formulación y evaluación de proyectos de inversión pública. A lo largo de mi trayectoria, he desempeñado roles como Jefe de la Unidad Formuladora en gobiernos locales y consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas para impulsar decisiones públicas más eficientes.
 
-Desde 2014 me dedico a la docencia universitaria, y actualmente soy profesor en la Facultad de Ingeniería Económica de la Universidad Nacional del Altiplano. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado en la formulación y evaluación de proyectos de inversión pública, experiencia que continuo desarrollando desde 2012. Mi labor combina rigor técnico, enfoque territorial y compromiso por fortalecer las políticas públicas y la gestión del desarrollo en el Perú.
+Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economista por la UNA Puno, donde también obtuve la Maestría en Proyectos de Inversión y la Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión. Desde el año 2014 me dedico a la docencia universitaria, combinando enseñanza, investigación aplicada y asesoría en proyectos. Mi trabajo se orienta a fortalecer la gestión pública mediante métodos rigurosos de evaluación, herramientas de análisis causal y enfoques interdisciplinarios para el desarrollo sostenible.
 
 ## Investigación
 ---
