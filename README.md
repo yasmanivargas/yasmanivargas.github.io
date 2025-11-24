@@ -1,14 +1,12 @@
 ## Acerca de mí
 
-Soy investigador en el Laboratorio de Datos del Banco Mundial y docente de Economía en la Pontificia Universidad Católica del Perú (PUCP) y en la Universidad del Pacífico. Actualmente colaboro con los profesores Victor Chernozhukov, Kate Vyborny y Pedro Sant'Anna en el desarrollo de paquetes econométricos enfocados en aprendizaje automático causal (causal machine learning).
+Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economista por la Universidad Nacional del Altiplano, donde también obtuve la Maestría en Proyectos de Inversión y la Segunda Especialidad en Formulación y Evaluación de Políticas Públicas. Mi formación integra economía, territorio y gestión pública, permitiéndome analizar y diseñar soluciones para el desarrollo sostenible y la mejora de la acción estatal.
 
-Actualmente curso la Maestría en Ciencias de la Computación en Cornell Tech. Obtuve el Bachillerato en Economía por la PUCP y la Maestría en Economía Cuantitativa por la Universidad de Múnich. Durante mi segundo año, fui investigador visitante en el Laboratorio de Ciencia de la Innovación de Harvard (LISH). También me desempeñé como asistente de investigación en Yale, el Instituto Max Planck de Innovación y Competencia (MPI) y MIT Sloan.
-
-Consulta mi **[currículum vitae](#)** para más información.
+Desde 2014 me dedico a la docencia universitaria, y actualmente soy profesor en la Facultad de Ingeniería Económica de la Universidad Nacional del Altiplano. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado en la formulación y evaluación de proyectos de inversión pública, experiencia que continuo desarrollando desde 2012. Mi labor combina rigor técnico, enfoque territorial y compromiso por fortalecer las políticas públicas y la gestión del desarrollo en el Perú.
 
 ## Investigación
 ---
-### Artítulos de trabajo
+### Artículos de trabajo
 
 ### Artículos publicados
 
