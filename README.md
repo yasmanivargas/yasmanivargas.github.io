@@ -6,5 +6,26 @@ Actualmente curso la Maestría en Ciencias de la Computación en Cornell Tech. O
 
 Consulta mi **[currículum vitae](#)** para más información.
 
-### Documentos de trabajo
+## Investigación
 ---
+### Artítulos de trabajo
+
+### Artículos publicados
+
+### Libros
+
+## Herramientas y paquetes
+---
+### Proyectos aplicados
+
+### Proyectos open source
+
+## Docencia y recursos de enseñanza
+---
+### Cursos
+
+### Recursos
+
+
+
+
