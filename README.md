@@ -6,7 +6,8 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 
 ## Investigación
 ---
-<!-- ### Artículos de trabajo -->
+### Ponencias
+- Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023. <small>Escuela de Posgrado - Universidad Nacional del Altiplano, 2025</small><br> [[PDF]()]
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
