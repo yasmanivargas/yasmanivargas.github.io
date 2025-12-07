@@ -7,7 +7,7 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 ## Investigación
 ---
 ### Ponencias
-- Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023. <small>Escuela de Posgrado - Universidad Nacional del Altiplano, 2025</small><br> [[PDF]()]
+- Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023. <small>Escuela de Posgrado - Universidad Nacional del Altiplano, 12/2025</small><br> [[PDF]()]
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
@@ -26,8 +26,4 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 ## Docencia y recursos de enseñanza
 ---
 ### Cursos
-- Diseño y evaluación de políticas públicas <br> Curso de maestría, Universidad Nacional del Altiplano, 2025 <br> [[Repositorio GitHub](https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA)]
-
-
-
-
+- Diseño y evaluación de políticas públicas <small>Maestría en economía, Universidad Nacional del Altiplano, 2025</small><br> [[Repositorio GitHub](https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA)]
