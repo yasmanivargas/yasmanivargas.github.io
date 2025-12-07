@@ -1,4 +1,4 @@
----
+
 ## Acerca de mí
 
 Soy docente en la Universidad Nacional del Altiplano (UNA), Universidad Peruana Unión (UPeU) y consultor especializado en formulación y evaluación de proyectos de inversión pública. A lo largo de mi trayectoria, he desempeñado roles como Jefe de la Unidad Formuladora en gobiernos locales y consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas para impulsar decisiones públicas más eficientes.
