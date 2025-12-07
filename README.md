@@ -1,8 +1,8 @@
 ## Sobre mí
 
-Soy docente en la Universidad Nacional del Altiplano (UNA), Universidad Peruana Unión (UPeU) y consultor especializado en formulación y evaluación de proyectos de inversión pública. A lo largo de mi trayectoria, he desempeñado roles como Jefe de la Unidad Formuladora en gobiernos locales y consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas para impulsar decisiones públicas más eficientes.
+Soy docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.
 
-Soy Doctor en Economía y Políticas Públicas (UNA), Arquitecto (UANCV) e Ingeniero Economista (UNA), también obtuve la Maestría en Proyectos de Inversión (UNA) y la Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión (UNA). Desde el año 2014 me dedico a la docencia universitaria, combinando enseñanza, investigación aplicada y asesoría en proyectos. Mi trabajo se orienta a fortalecer la gestión pública mediante métodos rigurosos de evaluación, herramientas de análisis causal y enfoques interdisciplinarios para el desarrollo sostenible.
+Soy Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.
 
 [[Linkedin]()] [[CV]()] [[CTI Vitae]()]
 
