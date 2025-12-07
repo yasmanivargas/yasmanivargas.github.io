@@ -23,7 +23,7 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 - Análisis predictivo y geoespacial de enfermedades crónicas en el Perú. <small>Edwin Cruz, **Yasmani Vargas**</small><br> [[Python]()]
 
 ### Proyectos open source
-- Open source para economistas <br> [[Python]()] [[R]()]
+- Open source para economistas: Análisis de datos y econometría <br> [[Python]()] [[R]()]
 
 ## Docencia y recursos de enseñanza
 ---
