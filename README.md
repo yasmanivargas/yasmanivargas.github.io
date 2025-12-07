@@ -9,8 +9,8 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 ### Artículos de trabajo
 
 ### Artículos publicados
-- Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. Marcial Guevara, Lucas Ponce, <br>Yasmani Vargas<br>, Richard Valle, Russo Flores, Julio Quispe; 2025
-  [DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)
+- Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 <br>
+  [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)]
 
 ### Libros
 
