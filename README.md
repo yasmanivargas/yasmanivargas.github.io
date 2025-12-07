@@ -12,7 +12,9 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)]
 
 ### Libros
-- Gobernanza y gestión pública: Un enfoque desde la teoría económica de la firma. <small>Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores; 2025 </small><br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477)]
+- Liderazgo y talento empresarial: Un enfoque desde la teoría económica de la firma. <small>Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores; 2025 </small><br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477)]
+- Gestión del cambio y del compromiso: Una perspectiva económica para liderar el cambio organizacional. <small>Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores; 2025 </small><br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159486)]
+- Gobernanza y gestión pública: Una perspectiva de desarrollo económico. <small>Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores; 2025 </small><br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159488)]
 
 ## Herramientas y paquetes
 ---
