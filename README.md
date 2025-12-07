@@ -4,6 +4,8 @@ Soy docente en la Universidad Nacional del Altiplano (UNA), Universidad Peruana 
 
 Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economista por la UNA Puno, donde también obtuve la Maestría en Proyectos de Inversión y la Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión. Desde el año 2014 me dedico a la docencia universitaria, combinando enseñanza, investigación aplicada y asesoría en proyectos. Mi trabajo se orienta a fortalecer la gestión pública mediante métodos rigurosos de evaluación, herramientas de análisis causal y enfoques interdisciplinarios para el desarrollo sostenible.
 
+[[Linkedin]()] [[CV]()] [[CTI Vitae]()]
+
 ---
 ## Investigación
 
