@@ -26,6 +26,7 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 
 ### Proyectos open source
 - Open source para economistas: Análisis de datos y econometría <br> [[Python]()] [[R]()]
+
 ---
 ## Docencia y recursos de enseñanza
 
