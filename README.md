@@ -6,7 +6,7 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 
 ## Investigación
 ---
-### Artículos de trabajo
+<!-- ### Artículos de trabajo -->
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
@@ -26,8 +26,6 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 ---
 ### Cursos
 - Diseño y evaluación de políticas públicas <br> Curso de maestría, Universidad Nacional del Altiplano, 2025 <br> [[Repositorio GitHub](https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA)]
-
-### Recursos
 
 
 
