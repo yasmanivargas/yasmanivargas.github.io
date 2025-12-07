@@ -28,4 +28,4 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 ## Docencia y recursos de enseñanza
 ---
 ### Cursos
-- Diseño y evaluación de políticas públicas <small>Maestría en economía, Universidad Nacional del Altiplano, 2025</small><br> [[Repositorio GitHub](https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA)]
+- Diseño y evaluación de políticas públicas. <small>Maestría en economía, Universidad Nacional del Altiplano, 2025</small><br> [[Repositorio GitHub](https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA)]
