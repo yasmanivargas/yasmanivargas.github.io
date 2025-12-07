@@ -1,6 +1,3 @@
----
-title: "Yasmani Vargas | Home"
----
 
 ## Acerca de mí
 
