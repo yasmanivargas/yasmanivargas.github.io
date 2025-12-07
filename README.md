@@ -13,6 +13,7 @@ Soy Doctor en Economía y Políticas Públicas, Arquitecto e Ingeniero Economist
 
 ### Libros
 - Gobernanza y gestión pública: Un enfoque desde la teoría económica de la firma <br> Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores <br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477)]
+
 ## Herramientas y paquetes
 ---
 ### Proyectos aplicados
