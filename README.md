@@ -10,7 +10,7 @@ Soy Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UAN
 ## Investigación
 
 ### Ponencias
-- Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023. <small>Escuela de Posgrado - II Foro de Divulgación Científica - Universidad Nacional del Altiplano, 12/2025</small><br> [[PDF](files/Presentación Foro Divulgación Cientifica 2025 - Yasmani Vargas.pdf)]
+- Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023. <small> II Foro de Divulgación Científica - Escuela de Posgrado de la Universidad Nacional del Altiplano, 12/2025</small><br> [[PDF](files/Presentación Foro Divulgación Cientifica 2025 - Yasmani Vargas.pdf)]
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
