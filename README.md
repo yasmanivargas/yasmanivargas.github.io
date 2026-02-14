@@ -1,8 +1,8 @@
 ## Sobre mí
 
-Soy docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.
+Docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.
 
-Soy Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.
+Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.
 
 [[Linkedin](https://www.linkedin.com/in/yasmani-vargas)] [[CV](files/YasmaniVargas_CV2025.pdf)] [[CTI Vitae]()]
 
@@ -14,6 +14,7 @@ Soy Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UAN
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
+- Calidad del aire en la ciudad de Juliaca, Perú: análisis del PM₁₀ y su relación con variables meteorológicas. <small>Edson Apaza, Russo Flores, **Yasmani Vargas**, Richard Valle, Lucas Ponce, Julio Quispe; 2026 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v10i28.445)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/617/1290)]
 
 ### Libros
 - Liderazgo y talento empresarial: Un enfoque desde la teoría económica de la firma. <small>Edson Apaza, Marcial Guevara, Julio Quispe, **Yasmani Vargas**, Russo Flores; 2025 </small><br> [[ISBN](https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477)]
