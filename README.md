@@ -1,6 +1,6 @@
 ## Sobre mí
 
-Docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.
+Director General de Administración en la Universidad Nacional de Desaguadero, Docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.
 
 Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.
 
