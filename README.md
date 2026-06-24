@@ -14,7 +14,7 @@ Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e
 
 ### Artículos publicados
 - Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano. <small>Marcial Guevara, Lucas Ponce, **Yasmani Vargas**, Richard Valle, Russo Flores, Julio Quispe; 2025 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v9i27.415)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255)]
-- Calidad del aire en la ciudad de Juliaca, Perú: análisis del PM₁₀ y su relación con variables meteorológicas. <small>Edson Apaza, Russo Flores, **Yasmani Vargas**, Richard Valle, Lucas Ponce, Julio Quispe; 2026 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v10i28.445)][[PDF]([)](https://revistaalfa.org/index.php/revistaalfa/article/view/617/1294)]
+- Calidad del aire en la ciudad de Juliaca, Perú: análisis del PM₁₀ y su relación con variables meteorológicas. <small>Edson Apaza, Russo Flores, **Yasmani Vargas**, Richard Valle, Lucas Ponce, Julio Quispe; 2026 </small><br> [[DOI](https://doi.org/10.33996/revistaalfa.v10i28.445)][[PDF](https://revistaalfa.org/index.php/revistaalfa/article/view/617/1294)]
 - Concentración y poder de mercado en los productos pecuarios de primera necesidad. <small>Russo Flores, **Yasmani Vargas**, Edwin Cruz, Richard Valle, Julio Quispe; 2026 </small><br> [[DOI](https://doi.org/10.5281/zenodo.20802745)][[PDF](https://www.revistainvecom.org/index.php/invecom/article/view/4369/5354)]
 
 ### Libros
