@@ -4,7 +4,7 @@ Director General de Administración en la Universidad Nacional de Desaguadero, D
 
 Doctor en Economía y Políticas Públicas por la UNA, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.
 
-[[Linkedin](https://www.linkedin.com/in/yasmani-vargas)] [[CV](files/YasmaniVargas_CV2025.pdf)] [[CTI Vitae]()]
+[[Linkedin](https://www.linkedin.com/in/yasmani-vargas)] [[CV](files/YasmaniVargas_CV2026.pdf)] [[CTI Vitae]()]
 
 ---
 ## Investigación
