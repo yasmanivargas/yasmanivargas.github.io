@@ -1,5 +1,6 @@
 title: "Yasmani Vargas"
-#logo: /assets/img/headshot_circle.png
-description: Doctor en Economía y Políticas Públicas <br> Universidad Nacional del Altiplano
-#show_downloads: true
-theme: jekyll-theme-minimal
+description: "Perfil académico y profesional de Yasmani Vargas"
+url: "https://yasmanivargas.github.io"
+baseurl: ""
+lang: "es-PE"
+markdown: kramdown
