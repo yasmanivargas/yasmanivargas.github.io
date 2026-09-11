@@ -14,6 +14,7 @@
   <meta property="og:description" content="Doctor en Economía y Políticas Públicas. Docente universitario, investigador y consultor en proyectos de inversión pública.">
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
   <meta property="og:image" content="https://avatars.githubusercontent.com/yasmanivargas?v=4">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
   <script type="application/ld+json">
   {
@@ -33,32 +34,37 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="masthead">
-    <div class="masthead__inner">
-      <a class="site-name" href="#inicio">Yasmani Vargas</a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#investigacion">Investigación</a>
-        <a href="#publicaciones">Publicaciones</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#docencia">Docencia</a>
-      </nav>
-    </div>
-  </header>
-
   <div id="inicio" class="layout">
     <aside class="sidebar" aria-label="Perfil académico">
-      <img class="portrait" src="https://avatars.githubusercontent.com/yasmanivargas?v=4" alt="Retrato de Yasmani Vargas" width="220" height="220">
-      <h1>Yasmani Vargas</h1>
-      <p class="degree">Doctor en Economía y Políticas Públicas</p>
-      <p class="discipline">Ingeniero Economista · Arquitecto</p>
-      <p class="profile-text">Docente universitario, investigador y consultor en formulación y evaluación de proyectos de inversión pública.</p>
+      <div class="author-avatar">
+        <img class="portrait" src="https://avatars.githubusercontent.com/yasmanivargas?v=4" alt="Retrato de Yasmani Vargas" width="175" height="175">
+      </div>
 
-      <ul class="profile-links" aria-label="Enlaces profesionales">
-        <li><a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a></li>
-        <li><a href="https://github.com/yasmanivargas" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/yasmani-vargas" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+      <div class="author-content">
+        <h1>Yasmani Vargas</h1>
+        <p class="degree">Doctor en Economía y Políticas Públicas</p>
+        <p class="discipline">Ingeniero Economista · Arquitecto</p>
+      </div>
+
+      <div class="author-links-wrap">
+        <ul class="profile-links" aria-label="Enlaces profesionales">
+          <li>
+            <a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">
+              <i class="fa-regular fa-file-lines fa-fw" aria-hidden="true"></i><span>CV</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/yasmanivargas" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i><span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yasmani-vargas" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin fa-fw" aria-hidden="true"></i><span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <main id="contenido" class="main-content">
@@ -66,7 +72,7 @@
         <h2>Sobre mí</h2>
         <p>Director General de Administración en la Universidad Nacional de Desaguadero, docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.</p>
         <p>Doctor en Economía y Políticas Públicas por la Universidad Nacional del Altiplano, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.</p>
-        <p class="note">Para mayor detalle sobre mi formación y experiencia profesional, puede consultar mi <a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">currículum vitae</a>.</p>
+        <p>Para mayor detalle sobre mi formación y experiencia profesional, puede consultar mi <a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">currículum vitae</a>.</p>
       </section>
 
       <section id="investigacion" class="section">
@@ -158,7 +164,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <span>© {{ 'now' | date: '%Y' }} Yasmani Vargas</span>
-      <span>Sitio académico alojado en GitHub Pages</span>
+      <span>Hosted on GitHub Pages</span>
     </div>
   </footer>
 </body>
