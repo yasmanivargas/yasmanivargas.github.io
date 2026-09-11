@@ -1,0 +1,252 @@
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #1f4b6e;
+  --accent-soft: #eaf1f6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.topbar__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: .94rem;
+}
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 56px;
+}
+
+.profile-card {
+  align-self: start;
+  position: sticky;
+  top: 96px;
+}
+
+.profile-photo {
+  width: 184px;
+  height: 184px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 24px;
+  border: 4px solid var(--surface);
+  box-shadow: 0 10px 30px rgba(31, 41, 55, .10);
+}
+
+.profile-card h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  letter-spacing: -.035em;
+}
+
+.profile-role {
+  margin: 0 0 6px;
+  font-weight: 650;
+}
+
+.profile-meta,
+.profile-summary,
+.muted {
+  color: var(--muted);
+}
+
+.profile-summary { margin-top: 18px; }
+
+.profile-links {
+  margin-top: 22px;
+  display: grid;
+  gap: 9px;
+}
+
+.profile-links a,
+.text-link,
+.inline-links a,
+.book-list a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content {
+  min-width: 0;
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 34px;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 24px rgba(31, 41, 55, .035);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .76rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.section h2 {
+  margin: 0 0 22px;
+  font-size: 2rem;
+  letter-spacing: -.03em;
+}
+
+.section h3 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+}
+
+.entry-list {
+  display: grid;
+  gap: 16px;
+}
+
+.entry {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.publication h3 { max-width: 760px; }
+
+.inline-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.subsection {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.book-list li {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.book-list span {
+  display: block;
+  color: var(--muted);
+  margin: 6px 0;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tag {
+  display: inline-block;
+  margin: 8px 6px 0 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+@media (max-width: 900px) {
+  .topbar__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .page-shell {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 30px;
+  }
+
+  .profile-card {
+    position: static;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .nav { gap: 12px; }
+  .section { padding: 24px 20px; }
+  .profile-photo { width: 148px; height: 148px; }
+  .section h2 { font-size: 1.65rem; }
+}
