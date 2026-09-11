@@ -5,15 +5,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>{{ site.title | default: 'Yasmani Vargas' }}</title>
   <meta name="description" content="{{ site.description | default: 'Perfil académico y profesional de Yasmani Vargas' }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yasmani Vargas">
+  <meta property="og:description" content="Doctor en Economía y Políticas Públicas. Docente universitario, investigador y consultor en proyectos de inversión pública.">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/yasmanivargas?v=4">
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yasmani Vargas",
+    "url": "https://yasmanivargas.github.io",
+    "image": "https://avatars.githubusercontent.com/yasmanivargas?v=4",
+    "jobTitle": "Docente universitario, investigador y consultor en proyectos de inversión pública",
+    "sameAs": [
+      "https://github.com/yasmanivargas",
+      "https://www.linkedin.com/in/yasmani-vargas"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="#inicio">Yasmani Vargas</a>
-      <nav class="nav" aria-label="Navegación principal">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="site-name" href="#inicio">Yasmani Vargas</a>
+      <nav class="site-nav" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#investigacion">Investigación</a>
         <a href="#publicaciones">Publicaciones</a>
@@ -23,135 +46,120 @@
     </div>
   </header>
 
-  <main id="inicio" class="page-shell">
-    <aside class="profile-card" aria-label="Perfil académico">
-      <img class="profile-photo" src="https://avatars.githubusercontent.com/yasmanivargas?v=4" alt="Yasmani Vargas">
+  <div id="inicio" class="layout">
+    <aside class="sidebar" aria-label="Perfil académico">
+      <img class="portrait" src="https://avatars.githubusercontent.com/yasmanivargas?v=4" alt="Retrato de Yasmani Vargas" width="220" height="220">
       <h1>Yasmani Vargas</h1>
-      <p class="profile-role">Doctor en Economía y Políticas Públicas</p>
-      <p class="profile-meta">Ingeniero Economista · Arquitecto</p>
-      <p class="profile-summary">Docente universitario, investigador y consultor en formulación y evaluación de proyectos de inversión pública.</p>
+      <p class="degree">Doctor en Economía y Políticas Públicas</p>
+      <p class="discipline">Ingeniero Economista · Arquitecto</p>
+      <p class="profile-text">Docente universitario, investigador y consultor en formulación y evaluación de proyectos de inversión pública.</p>
 
-      <div class="profile-links">
-        <a href="https://github.com/yasmanivargas" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/yasmani-vargas" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">Currículum Vitae</a>
-      </div>
+      <ul class="profile-links" aria-label="Enlaces profesionales">
+        <li><a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="https://github.com/yasmanivargas" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/yasmani-vargas" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </aside>
 
-    <article class="content">
-      <section id="sobre-mi" class="section">
-        <p class="eyebrow">Perfil</p>
+    <main id="contenido" class="main-content">
+      <section id="sobre-mi" class="section section--first">
         <h2>Sobre mí</h2>
         <p>Director General de Administración en la Universidad Nacional de Desaguadero, docente universitario en la Universidad Nacional del Altiplano (UNA) y la Universidad Peruana Unión (UPeU), y consultor en formulación y evaluación de proyectos de inversión pública. He trabajado como Jefe de la Unidad Formuladora en gobiernos locales y como consultor privado, integrando análisis económico, enfoque territorial y diseño de políticas. Desde 2014 ejerzo la docencia combinando enseñanza, investigación aplicada y asesoría técnica.</p>
         <p>Doctor en Economía y Políticas Públicas por la Universidad Nacional del Altiplano, Arquitecto por la UANCV e Ingeniero Economista por la UNA. Cuento con una Maestría en Proyectos de Inversión y una Segunda Especialidad en Formulación y Evaluación de Proyectos de Inversión, también por la UNA. Mi formación integra economía, territorio y gestión pública, con énfasis en métodos de evaluación y análisis causal para la mejora de la acción estatal.</p>
+        <p class="note">Para mayor detalle sobre mi formación y experiencia profesional, puede consultar mi <a href="{{ '/files/YasmaniVargas_CV2026.pdf' | relative_url }}" target="_blank" rel="noopener">currículum vitae</a>.</p>
       </section>
 
       <section id="investigacion" class="section">
-        <p class="eyebrow">Actividad académica</p>
         <h2>Investigación</h2>
-        <div class="entry">
-          <h3>Ponencias</h3>
-          <p><strong>Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023.</strong></p>
-          <p class="muted">II Foro de Divulgación Científica · Escuela de Posgrado de la Universidad Nacional del Altiplano · 12/2025</p>
-          <a class="text-link" href="{{ '/files/Presentación Foro Divulgación Cientifica 2025 - Yasmani Vargas.pdf' | relative_url }}" target="_blank" rel="noopener">Ver presentación en PDF →</a>
-        </div>
+        <h3>Ponencias</h3>
+        <article class="item">
+          <p class="item-title">Impacto del Programa Vaso de Leche en la desnutrición infantil en el departamento de Puno, año 2023</p>
+          <p class="item-meta">II Foro de Divulgación Científica · Escuela de Posgrado de la Universidad Nacional del Altiplano · diciembre de 2025</p>
+          <p class="item-links"><a href="{{ '/files/Presentación Foro Divulgación Cientifica 2025 - Yasmani Vargas.pdf' | relative_url }}" target="_blank" rel="noopener">[PDF]</a></p>
+        </article>
       </section>
 
       <section id="publicaciones" class="section">
-        <p class="eyebrow">Producción científica</p>
         <h2>Publicaciones</h2>
-        <div class="entry-list">
-          <article class="entry publication">
-            <h3>Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano</h3>
-            <p class="muted">Marcial Guevara, Lucas Ponce, <strong>Yasmani Vargas</strong>, Richard Valle, Russo Flores, Julio Quispe · 2025</p>
-            <div class="inline-links">
-              <a href="https://doi.org/10.33996/revistaalfa.v9i27.415" target="_blank" rel="noopener">DOI</a>
-              <a href="https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255" target="_blank" rel="noopener">PDF</a>
-            </div>
-          </article>
+        <h3>Artículos publicados</h3>
 
-          <article class="entry publication">
-            <h3>Calidad del aire en la ciudad de Juliaca, Perú: análisis del PM₁₀ y su relación con variables meteorológicas</h3>
-            <p class="muted">Edson Apaza, Russo Flores, <strong>Yasmani Vargas</strong>, Richard Valle, Lucas Ponce, Julio Quispe · 2026</p>
-            <div class="inline-links">
-              <a href="https://doi.org/10.33996/revistaalfa.v10i28.445" target="_blank" rel="noopener">DOI</a>
-              <a href="https://revistaalfa.org/index.php/revistaalfa/article/view/617/1294" target="_blank" rel="noopener">PDF</a>
-            </div>
-          </article>
+        <article class="item">
+          <p class="item-title">Análisis de las elasticidades de la demanda de productos avícolas para el caso peruano</p>
+          <p class="item-meta">Marcial Guevara, Lucas Ponce, <strong>Yasmani Vargas</strong>, Richard Valle, Russo Flores, Julio Quispe · 2025</p>
+          <p class="item-links"><a href="https://doi.org/10.33996/revistaalfa.v9i27.415" target="_blank" rel="noopener">[DOI]</a> <a href="https://revistaalfa.org/index.php/revistaalfa/article/view/573/1255" target="_blank" rel="noopener">[PDF]</a></p>
+        </article>
 
-          <article class="entry publication">
-            <h3>Concentración y poder de mercado en los productos pecuarios de primera necesidad</h3>
-            <p class="muted">Russo Flores, <strong>Yasmani Vargas</strong>, Edwin Cruz, Richard Valle, Julio Quispe · 2026</p>
-            <div class="inline-links">
-              <a href="https://doi.org/10.5281/zenodo.20802745" target="_blank" rel="noopener">DOI</a>
-              <a href="https://www.revistainvecom.org/index.php/invecom/article/view/4369/5354" target="_blank" rel="noopener">PDF</a>
-            </div>
-          </article>
+        <article class="item">
+          <p class="item-title">Calidad del aire en la ciudad de Juliaca, Perú: análisis del PM₁₀ y su relación con variables meteorológicas</p>
+          <p class="item-meta">Edson Apaza, Russo Flores, <strong>Yasmani Vargas</strong>, Richard Valle, Lucas Ponce, Julio Quispe · 2026</p>
+          <p class="item-links"><a href="https://doi.org/10.33996/revistaalfa.v10i28.445" target="_blank" rel="noopener">[DOI]</a> <a href="https://revistaalfa.org/index.php/revistaalfa/article/view/617/1294" target="_blank" rel="noopener">[PDF]</a></p>
+        </article>
 
-          <article class="entry publication">
-            <h3>Análisis de la estructura de mercado de productos pecuarios de primera necesidad en Perú: concentración y poder de mercado</h3>
-            <p class="muted">Russo Flores, <strong>Yasmani Vargas</strong>, Edwin Cruz, Richard Valle · 2026</p>
-            <div class="inline-links">
-              <a href="http://doi.org/10.59659/impulso.v.6i14.317" target="_blank" rel="noopener">DOI</a>
-              <a href="https://revistaimpulso.org/index.php/impulso/article/view/1354/1827" target="_blank" rel="noopener">PDF</a>
-            </div>
-          </article>
-        </div>
+        <article class="item">
+          <p class="item-title">Concentración y poder de mercado en los productos pecuarios de primera necesidad</p>
+          <p class="item-meta">Russo Flores, <strong>Yasmani Vargas</strong>, Edwin Cruz, Richard Valle, Julio Quispe · 2026</p>
+          <p class="item-links"><a href="https://doi.org/10.5281/zenodo.20802745" target="_blank" rel="noopener">[DOI]</a> <a href="https://www.revistainvecom.org/index.php/invecom/article/view/4369/5354" target="_blank" rel="noopener">[PDF]</a></p>
+        </article>
 
-        <div class="subsection">
-          <h3>Libros</h3>
-          <ul class="book-list">
-            <li>
-              <strong>Liderazgo y talento empresarial: Un enfoque desde la teoría económica de la firma.</strong>
-              <span>Edson Apaza, Marcial Guevara, Julio Quispe, Yasmani Vargas, Russo Flores · 2025</span>
-              <a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477" target="_blank" rel="noopener">ISBN</a>
-            </li>
-            <li>
-              <strong>Gestión del cambio y del compromiso: Una perspectiva económica para liderar el cambio organizacional.</strong>
-              <span>Edson Apaza, Marcial Guevara, Julio Quispe, Yasmani Vargas, Russo Flores · 2025</span>
-              <a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159486" target="_blank" rel="noopener">ISBN</a>
-            </li>
-            <li>
-              <strong>Gobernanza y gestión pública: Una perspectiva de desarrollo económico.</strong>
-              <span>Edson Apaza, Marcial Guevara, Julio Quispe, Yasmani Vargas, Russo Flores · 2025</span>
-              <a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159488" target="_blank" rel="noopener">ISBN</a>
-            </li>
-          </ul>
-        </div>
+        <article class="item">
+          <p class="item-title">Análisis de la estructura de mercado de productos pecuarios de primera necesidad en Perú: concentración y poder de mercado</p>
+          <p class="item-meta">Russo Flores, <strong>Yasmani Vargas</strong>, Edwin Cruz, Richard Valle · 2026</p>
+          <p class="item-links"><a href="https://doi.org/10.59659/impulso.v.6i14.317" target="_blank" rel="noopener">[DOI]</a> <a href="https://revistaimpulso.org/index.php/impulso/article/view/1354/1827" target="_blank" rel="noopener">[PDF]</a></p>
+        </article>
+
+        <h3 class="subheading">Libros</h3>
+
+        <article class="item">
+          <p class="item-title">Liderazgo y talento empresarial: Un enfoque desde la teoría económica de la firma</p>
+          <p class="item-meta">Edson Apaza, Marcial Guevara, Julio Quispe, <strong>Yasmani Vargas</strong>, Russo Flores · 2025</p>
+          <p class="item-links"><a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159477" target="_blank" rel="noopener">[ISBN]</a></p>
+        </article>
+
+        <article class="item">
+          <p class="item-title">Gestión del cambio y del compromiso: Una perspectiva económica para liderar el cambio organizacional</p>
+          <p class="item-meta">Edson Apaza, Marcial Guevara, Julio Quispe, <strong>Yasmani Vargas</strong>, Russo Flores · 2025</p>
+          <p class="item-links"><a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159486" target="_blank" rel="noopener">[ISBN]</a></p>
+        </article>
+
+        <article class="item">
+          <p class="item-title">Gobernanza y gestión pública: Una perspectiva de desarrollo económico</p>
+          <p class="item-meta">Edson Apaza, Marcial Guevara, Julio Quispe, <strong>Yasmani Vargas</strong>, Russo Flores · 2025</p>
+          <p class="item-links"><a href="https://isbn.bnp.gob.pe/catalogo.php?mode=detalle&nt=159488" target="_blank" rel="noopener">[ISBN]</a></p>
+        </article>
       </section>
 
       <section id="proyectos" class="section">
-        <p class="eyebrow">Trabajo aplicado</p>
         <h2>Proyectos y herramientas</h2>
-        <div class="entry-list two-column">
-          <article class="entry">
-            <h3>Análisis predictivo y geoespacial de enfermedades crónicas en el Perú</h3>
-            <p class="muted">Edwin Cruz · Yasmani Vargas</p>
-            <span class="tag">Python</span>
-          </article>
-          <article class="entry">
-            <h3>Open source para economistas: análisis de datos y econometría</h3>
-            <p class="muted">Recursos orientados al análisis económico reproducible.</p>
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-          </article>
-        </div>
+
+        <article class="item">
+          <p class="item-title">Análisis predictivo y geoespacial de enfermedades crónicas en el Perú</p>
+          <p class="item-meta">Edwin Cruz, <strong>Yasmani Vargas</strong></p>
+          <p class="item-tags"><span>Python</span></p>
+        </article>
+
+        <article class="item">
+          <p class="item-title">Open source para economistas: análisis de datos y econometría</p>
+          <p class="item-meta">Proyecto orientado al análisis económico reproducible.</p>
+          <p class="item-tags"><span>Python</span><span>R</span></p>
+        </article>
       </section>
 
       <section id="docencia" class="section">
-        <p class="eyebrow">Enseñanza</p>
-        <h2>Docencia y recursos</h2>
-        <article class="entry">
-          <h3>Diseño y evaluación de políticas públicas</h3>
-          <p class="muted">Maestría en Economía · Universidad Nacional del Altiplano · 2025</p>
-          <a class="text-link" href="https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA" target="_blank" rel="noopener">Repositorio GitHub →</a>
+        <h2>Docencia</h2>
+        <article class="item">
+          <p class="item-title">Diseño y evaluación de políticas públicas</p>
+          <p class="item-meta">Maestría en Economía · Universidad Nacional del Altiplano · 2025</p>
+          <p class="item-links"><a href="https://github.com/yasmanivargas/Evaluacion_de_politicas_publicas-UNA" target="_blank" rel="noopener">[Repositorio GitHub]</a></p>
         </article>
       </section>
-    </article>
-  </main>
+    </main>
+  </div>
 
   <footer class="footer">
-    <p>© {{ 'now' | date: '%Y' }} Yasmani Vargas · Sitio académico alojado en GitHub Pages</p>
+    <div class="footer__inner">
+      <span>© {{ 'now' | date: '%Y' }} Yasmani Vargas</span>
+      <span>Sitio académico alojado en GitHub Pages</span>
+    </div>
   </footer>
 </body>
 </html>
