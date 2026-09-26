@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Calificación de Hoja de Vida · UNAJ</title>
+<meta name="description" content="Calculadora referencial basada exclusivamente en el Anexo 3 - Tabla de Calificación de Hoja de Vida proporcionado por el usuario.">
+<style>
+:root{
+  --bg:#f3f6f8; --panel:#ffffff; --ink:#17232d; --muted:#647584; --line:#dce4e9;
+  --brand:#123f58; --brand2:#1d6a82; --brand-soft:#eaf3f6; --accent:#d7a13f;
+  --ok:#16714c; --ok-bg:#eaf7f0; --warn:#9b6710; --warn-bg:#fff7e6;
+  --bad:#a43b32; --bad-bg:#fff0ee; --shadow:0 14px 36px rgba(20,48,65,.10);
+  --shadow-sm:0 4px 14px rgba(20,48,65,.08); --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.48}
+a{color:var(--brand2)}
+.hero{background:linear-gradient(135deg,#0d2d40 0%,#123f58 55%,#1d6a82 115%);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.hero .wrap{padding-top:34px;padding-bottom:30px}
+.kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#b8dbe7;font-weight:800}
+.hero h1{margin:.25em 0 .2em;font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.1}
+.hero p{margin:.35rem 0;color:#dcebf1;max-width:900px}
+.hero .source{font-size:.86rem;color:#f3d9a5}
+.main{padding-top:22px;padding-bottom:70px}
+.notice{background:var(--warn-bg);border:1px solid #f0d79f;border-radius:14px;padding:13px 15px;color:#6f4e11;font-size:.87rem;margin-bottom:18px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+@media(max-width:940px){.layout{grid-template-columns:1fr}.scorebox{position:static!important;order:-1}}
+.card, details.section{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin-bottom:16px}
+.card{padding:20px}
+.card h2{margin:0 0 14px;color:var(--brand);font-size:1.15rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+@media(max-width:650px){.grid2,.grid3{grid-template-columns:1fr}}
+label{font-size:.83rem;font-weight:750;color:#284657;display:block;margin-bottom:5px}
+input[type=text], input[type=number], select{
+  width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 11px;background:#fbfdfe;
+  color:var(--ink);font:inherit;font-size:.92rem
+}
+input:focus,select:focus{outline:2px solid #91c6d6;border-color:transparent}
+details.section{overflow:hidden}
+details.section summary{list-style:none;cursor:pointer;padding:17px 18px;display:flex;align-items:center;gap:12px;background:#fff}
+details.section summary::-webkit-details-marker{display:none}
+.secnum{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:850;flex:0 0 auto}
+.sectitle{font-weight:800;color:var(--brand);flex:1}
+.secscore{font-size:.82rem;font-weight:800;color:var(--brand2);background:var(--brand-soft);padding:5px 9px;border-radius:999px;white-space:nowrap}
+details[open] summary{border-bottom:1px solid var(--line)}
+.sectionbody{padding:16px 18px 18px}
+.hint{font-size:.78rem;color:var(--muted);margin-top:5px}
+.subhead{font-size:.9rem;font-weight:850;color:var(--brand);margin:16px 0 8px}
+.itemgrid{display:grid;grid-template-columns:minmax(0,1fr) 130px 92px;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed #e4eaee}
+.itemgrid:last-child{border-bottom:none}
+.itemdesc{font-size:.86rem}
+.itemdesc b{color:#294b5c}
+.itemscore{text-align:right;font-weight:800;font-size:.85rem;color:var(--brand2)}
+@media(max-width:620px){.itemgrid{grid-template-columns:1fr 110px}.itemscore{grid-column:1/-1;text-align:left;margin-top:-5px}}
+.check{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fafcfd}
+.check input{margin-top:3px;accent-color:var(--brand2)}
+.check label{margin:0;color:var(--ink);font-weight:650}
+.scorebox{position:sticky;top:14px}
+.totalcard{background:linear-gradient(155deg,#0d2d40,#185b73);color:#fff;border:none}
+.totalcard h2{color:#fff}
+.total{font-size:3.05rem;font-weight:900;line-height:1;margin-top:4px}
+.total small{font-size:1rem;font-weight:700;color:#bdd8e3}
+.progress{height:11px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden;margin:15px 0 8px}
+.progress span{display:block;height:100%;width:0;background:#f0bd59;transition:width .2s}
+.percent{font-size:.82rem;color:#d9e9ef}
+.minirows{margin-top:13px;border-top:1px solid rgba(255,255,255,.17);padding-top:9px}
+.minirow{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;padding:4px 0;color:#deebf0}
+.minirow b{color:#fff}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.btn{border:none;border-radius:999px;padding:10px 16px;font-weight:800;font-size:.88rem;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--accent);color:#382707}
+.btn.secondary{background:#fff;color:var(--brand);border:1px solid var(--line)}
+.btn.ghost{background:rgba(255,255,255,.11);color:#fff;border:1px solid rgba(255,255,255,.28)}
+.breakdown{width:100%;border-collapse:collapse;font-size:.84rem}
+.breakdown th{background:#edf4f7;color:var(--brand);padding:8px;text-align:left;border-bottom:2px solid var(--line)}
+.breakdown td{padding:8px;border-bottom:1px solid var(--line)}
+.breakdown td:last-child,.breakdown th:last-child{text-align:right;font-weight:800}
+.badge{display:inline-block;font-size:.7rem;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--brand-soft);color:var(--brand2)}
+.discrepancy{background:var(--bad-bg);border:1px solid #f0c7c2;color:#7b302a;padding:11px 13px;border-radius:12px;font-size:.8rem;margin-bottom:13px}
+footer{margin-top:28px;padding:22px 0;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+.printonly{display:none}
+@media print{
+  body{background:#fff}
+  .hero,.notice,.leftcol,.actions,.screenonly{display:none!important}
+  .layout{display:block}
+  .scorebox{position:static}
+  .totalcard{background:#fff!important;color:#111;border:1px solid #aaa;box-shadow:none}
+  .totalcard h2,.totalcard .total,.totalcard .minirow b{color:#111}
+  .totalcard small,.totalcard .percent,.totalcard .minirow{color:#333}
+  .progress{display:none}
+  .printonly{display:block}
+  .card{box-shadow:none}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">UNAJ · ANEXO 3 · TABLA DE CALIFICACIÓN DE HOJA DE VIDA</div>
+    <h1>Calculadora de Calificación de Hoja de Vida</h1>
+    <p>Ingresa tus antecedentes y la herramienta calculará automáticamente los subtotales y el puntaje total, respetando los puntajes específicos y máximos consignados en el documento proporcionado.</p>
+    <p class="source">Puntaje máximo de la hoja de vida: <b>70 puntos</b>.</p>
+  </div>
+</header>
+
+<main class="wrap main">
+  <div class="notice">
+    <b>Uso referencial.</b> Esta versión se construyó únicamente a partir del Anexo 3 proporcionado. No incorpora criterios externos ni interpreta requisitos que no estén expresamente consignados en esas tres páginas.
+  </div>
+
+  <div class="layout">
+    <div class="leftcol">
+      <section class="card">
+        <h2>Datos generales</h2>
+        <div class="grid2">
+          <div><label for="nombre">Apellidos y nombres</label><input id="nombre" type="text" placeholder="Ingrese nombres y apellidos"></div>
+          <div><label for="condicion">Condición de plaza</label><input id="condicion" type="text" value="Nombramiento Docente"></div>
+          <div><label for="codigo">Código de plaza</label><input id="codigo" type="text" placeholder="Código"></div>
+          <div><label for="categoria">Categoría</label>
+            <select id="categoria">
+              <option value="">Seleccione</option>
+              <option>Principal T/C</option><option>Asociado T/C</option><option>Auxiliar T/C</option><option>Auxiliar T/P</option>
+            </select>
+          </div>
+          <div><label for="departamento">Departamento</label><input id="departamento" type="text" placeholder="Departamento académico"></div>
+        </div>
+      </section>
+
+      <details class="section" open>
+        <summary><span class="secnum">1</span><span class="sectitle">Grados académicos y títulos</span><span class="secscore" id="s1badge">0 / 20</span></summary>
+        <div class="sectionbody">
+          <div class="grid2">
+            <div class="check"><input class="calc" type="checkbox" id="titulo" data-section="1" data-fixed="4"><label for="titulo">1.1 Título Profesional <span class="badge">4 pts</span></label></div>
+            <div class="check"><input class="calc" type="checkbox" id="maestro" data-section="1" data-fixed="6"><label for="maestro">1.2.a Grado de Maestro <span class="badge">6 pts</span></label></div>
+            <div class="check"><input class="calc" type="checkbox" id="doctor" data-section="1" data-fixed="8"><label for="doctor">1.2.b Grado de Doctor <span class="badge">8 pts</span></label></div>
+            <div class="check"><input class="calc" type="checkbox" id="otrogrado" data-section="1" data-fixed="2"><label for="otrogrado">1.3 Otro Título Profesional Universitario o grado académico <span class="badge">2 pts</span></label></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="section" open>
+        <summary><span class="secnum">2</span><span class="sectitle">Experiencia profesional</span><span class="secscore" id="s2badge">0 / 7</span></summary>
+        <div class="sectionbody">
+          <div class="itemgrid">
+            <div class="itemdesc"><b>2.1 Experiencia Profesional</b> en entidades públicas y/o privadas<br><span class="hint">1 punto por cada año · máximo específico 7</span></div>
+            <input class="calc" id="exp_prof" type="number" min="0" step="1" value="0" data-section="2" data-rate="1" data-cap="7">
+            <div class="itemscore" id="score_exp_prof">0 pts</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">3</span><span class="sectitle">Experiencia docente universitaria</span><span class="secscore" id="s3badge">0 / 8</span></summary>
+        <div class="sectionbody">
+          <div class="discrepancy"><b>Nota de fidelidad al anexo:</b> en “Principal Ordinario Tiempo Completo” el texto indica “1 punto por año c/u hasta 4”, mientras la columna “Puntaje Específico” muestra 3. Esta calculadora aplica 3 como tope computable para ese ítem y conserva visible esta discrepancia.</div>
+          <div class="itemgrid"><div class="itemdesc"><b>3.1.a Principal Ordinario Tiempo Completo</b><br><span class="hint">1 punto por año · puntaje específico 3</span></div><input class="calc" id="doc_principal" type="number" min="0" step="1" value="0" data-section="3" data-rate="1" data-cap="3"><div class="itemscore" id="score_doc_principal">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>3.1.b Asociado Ordinario Tiempo Completo</b><br><span class="hint">0,75 puntos por año · hasta 4 años</span></div><input class="calc" id="doc_asociado" type="number" min="0" step="1" value="0" data-section="3" data-rate=".75" data-cap="3"><div class="itemscore" id="score_doc_asociado">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>3.1.c Auxiliar Ordinario Tiempo Completo</b><br><span class="hint">0,5 puntos por año · puntaje específico 2</span></div><input class="calc" id="doc_auxiliar" type="number" min="0" step="1" value="0" data-section="3" data-rate=".5" data-cap="2"><div class="itemscore" id="score_doc_auxiliar">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>3.1.d Contratado</b><br><span class="hint">0,25 puntos por año · hasta 8 años</span></div><input class="calc" id="doc_contratado" type="number" min="0" step="1" value="0" data-section="3" data-rate=".25" data-cap="2"><div class="itemscore" id="score_doc_contratado">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">4</span><span class="sectitle">Actualizaciones y capacitaciones en la especialidad · últimos 5 años</span><span class="secscore" id="s4badge">0 / 5</span></summary>
+        <div class="sectionbody">
+          <p class="hint">El anexo señala que estas actualizaciones y capacitaciones no son consideradas en la Sección 1.</p>
+          <div class="itemgrid"><div class="itemdesc"><b>4.1 Estudios de posdoctorado concluido y certificado</b></div><div class="check"><input class="calc" type="checkbox" id="posdoc" data-section="4" data-fixed="2"><label for="posdoc">Sí</label></div><div class="itemscore" id="score_posdoc">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.2.a Semestres de otra maestría</b><br><span class="hint">0,5 puntos c/u · hasta 4</span></div><input class="calc" id="sem_maestria" type="number" min="0" step="1" value="0" data-section="4" data-rate=".5" data-cap="2"><div class="itemscore" id="score_sem_maestria">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.2.b Semestres de otro doctorado</b><br><span class="hint">0,5 puntos c/u · hasta 6</span></div><input class="calc" id="sem_doctorado" type="number" min="0" step="1" value="0" data-section="4" data-rate=".5" data-cap="3"><div class="itemscore" id="score_sem_doctorado">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.3 Pasantías</b><br><span class="hint">0,5 puntos c/u · hasta 4</span></div><input class="calc" id="pasantias" type="number" min="0" step="1" value="0" data-section="4" data-rate=".5" data-cap="2"><div class="itemscore" id="score_pasantias">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.4 Diplomados de 24 créditos</b><br><span class="hint">1 punto c/u · hasta 2</span></div><input class="calc" id="diplomados" type="number" min="0" step="1" value="0" data-section="4" data-rate="1" data-cap="2"><div class="itemscore" id="score_diplomados">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.5 Capacitaciones de más de 40 horas</b><br><span class="hint">0,5 puntos c/u · puntaje específico 1,5</span></div><input class="calc" id="cap_mas40" type="number" min="0" step="1" value="0" data-section="4" data-rate=".5" data-cap="1.5"><div class="itemscore" id="score_cap_mas40">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>4.6 Capacitaciones de menos de 40 horas</b><br><span class="hint">0,25 puntos c/u · puntaje específico 1</span></div><input class="calc" id="cap_menos40" type="number" min="0" step="1" value="0" data-section="4" data-rate=".25" data-cap="1"><div class="itemscore" id="score_cap_menos40">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">5</span><span class="sectitle">Producción intelectual e investigación · últimos 5 años</span><span class="secscore" id="s5badge">0 / 14</span></summary>
+        <div class="sectionbody">
+          <div class="discrepancy"><b>Nota:</b> el anexo presenta numeración repetida en varios subítems de esta sección. La herramienta conserva la secuencia y el contenido tal como aparecen, sin renumerarlos ni fusionarlos.</div>
+
+          <div class="subhead">Libros y capítulos</div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.1 Libros de Investigación por pares</b><br><span class="hint">Puntaje específico 3; el anexo no consigna “por cada uno”.</span></div><div class="check"><input class="calc" type="checkbox" id="libro_pares" data-section="5" data-fixed="3"><label for="libro_pares">Cuenta con evidencia</label></div><div class="itemscore" id="score_libro_pares">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.2 Libros con depósito legal, con ISBN</b><br><span class="hint">1 punto x c/u; el mismo renglón menciona “Capítulo de libro (0,5 puntos x c/u)”. Tope específico combinado: 2.</span></div><div><input class="calc" id="libros_isbn" type="number" min="0" step="1" value="0" data-group="libro52"><span class="hint">N.º libros</span></div><div class="itemscore" id="score_libro52">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.2 Capítulo de libro</b> (mencionado en el mismo renglón)<br><span class="hint">0,5 puntos x c/u · comparte tope 2 con libros ISBN</span></div><div><input class="calc" id="capitulos_52" type="number" min="0" step="1" value="0" data-group="libro52"><span class="hint">N.º capítulos</span></div><div class="itemscore">—</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.3 Capítulo de Libros</b><br><span class="hint">0,5 x c/u · hasta 4</span></div><input class="calc" id="capitulos_53" type="number" min="0" step="1" value="0" data-section="5" data-rate=".5" data-cap="2"><div class="itemscore" id="score_capitulos_53">0 pts</div></div>
+
+          <div class="subhead">Registro de patentes certificado por INDECOPI</div>
+          <div class="itemgrid"><div class="itemdesc"><b>Invención</b><br><span class="hint">1,5 puntos c/u · hasta 2</span></div><input class="calc" id="pat_inv" type="number" min="0" step="1" value="0" data-section="5" data-rate="1.5" data-cap="3"><div class="itemscore" id="score_pat_inv">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Obtentor</b><br><span class="hint">1,5 puntos c/u · hasta 2</span></div><input class="calc" id="pat_obt" type="number" min="0" step="1" value="0" data-section="5" data-rate="1.5" data-cap="3"><div class="itemscore" id="score_pat_obt">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Modelo utilidad</b><br><span class="hint">1,5 puntos c/u · hasta 2</span></div><input class="calc" id="pat_mod" type="number" min="0" step="1" value="0" data-section="5" data-rate="1.5" data-cap="3"><div class="itemscore" id="score_pat_mod">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Registro de Software</b><br><span class="hint">1,5 puntos c/u · hasta 2</span></div><input class="calc" id="pat_soft" type="number" min="0" step="1" value="0" data-section="5" data-rate="1.5" data-cap="3"><div class="itemscore" id="score_pat_soft">0 pts</div></div>
+
+          <div class="subhead">Trabajos de investigación acreditados por entidades públicas o privadas</div>
+          <div class="itemgrid"><div class="itemdesc"><b>Con resolución o constancia de culminación</b><br><span class="hint">Autor principal: 1 punto c/u · Coautor: 0,5 puntos c/u · tope específico 2</span></div><div><input class="calc" id="inv_cul_principal" type="number" min="0" step="1" value="0" data-group="invcul"><span class="hint">Autor principal</span></div><div class="itemscore" id="score_invcul">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc">Coautor de trabajo culminado</div><div><input class="calc" id="inv_cul_coautor" type="number" min="0" step="1" value="0" data-group="invcul"><span class="hint">Coautor</span></div><div class="itemscore">—</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>En ejecución con Resolución y certificación oficial</b> (con más del 50% de ejecución)<br><span class="hint">Autor principal: 0,5 punto c/u · Coautor: 0,25 puntos c/u · tope específico 1</span></div><div><input class="calc" id="inv_eje_principal" type="number" min="0" step="1" value="0" data-group="inveje"><span class="hint">Autor principal</span></div><div class="itemscore" id="score_inveje">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc">Coautor de trabajo en ejecución</div><div><input class="calc" id="inv_eje_coautor" type="number" min="0" step="1" value="0" data-group="inveje"><span class="hint">Coautor</span></div><div class="itemscore">—</div></div>
+
+          <div class="subhead">Artículos en revistas científicas</div>
+          <div class="itemgrid"><div class="itemdesc"><b>SCOPUS o WEB OF SCIENCE, CONFERENCIAS · Q1</b><br><span class="hint">2,5 puntos c/u · hasta 2</span></div><input class="calc" id="q1" type="number" min="0" step="1" value="0" data-section="5" data-rate="2.5" data-cap="5"><div class="itemscore" id="score_q1">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Q2</b><br><span class="hint">2 puntos c/u · hasta 2</span></div><input class="calc" id="q2" type="number" min="0" step="1" value="0" data-section="5" data-rate="2" data-cap="4"><div class="itemscore" id="score_q2">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Q3</b><br><span class="hint">1,5 puntos c/u · hasta 2</span></div><input class="calc" id="q3" type="number" min="0" step="1" value="0" data-section="5" data-rate="1.5" data-cap="3"><div class="itemscore" id="score_q3">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Q4</b><br><span class="hint">1 punto c/u · hasta 2</span></div><input class="calc" id="q4" type="number" min="0" step="1" value="0" data-section="5" data-rate="1" data-cap="2"><div class="itemscore" id="score_q4">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>SCIELO, LATIN DEX, REDALYC · Autor</b><br><span class="hint">0,5 puntos c/u · hasta 3</span></div><input class="calc" id="scielo" type="number" min="0" step="1" value="0" data-section="5" data-rate=".5" data-cap="1.5"><div class="itemscore" id="score_scielo">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.5 Manual o Separatas</b><br><span class="hint">0,5 puntos x c/u hasta 3 · constancia emitida por Facultad o Escuela Profesional</span></div><input class="calc" id="manuales" type="number" min="0" step="1" value="0" data-section="5" data-rate=".5" data-cap="1.5"><div class="itemscore" id="score_manuales">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>5.6 Guías de enseñanza</b><br><span class="hint">0,10 puntos x c/u hasta 10 · constancia emitida por Facultad o Escuela Profesional</span></div><input class="calc" id="guias" type="number" min="0" step="1" value="0" data-section="5" data-rate=".1" data-cap="1"><div class="itemscore" id="score_guias">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">6</span><span class="sectitle">Cargos directivos o apoyo administrativo</span><span class="secscore" id="s6badge">0 / 3</span></summary>
+        <div class="sectionbody">
+          <div class="itemgrid"><div class="itemdesc"><b>Rector, Vicerrector, Decano</b><br><span class="hint">1 punto por año · puntaje específico 3</span></div><input class="calc" id="cargo_alto" type="number" min="0" step="1" value="0" data-section="6" data-rate="1" data-cap="3"><div class="itemscore" id="score_cargo_alto">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Director de Departamento, Director de Escuela, Director de la Unidad de investigación de Facultad, Director de Proyección Social y Extensión</b><br><span class="hint">0,5 puntos por año · puntaje específico 2</span></div><input class="calc" id="cargo_dir" type="number" min="0" step="1" value="0" data-section="6" data-rate=".5" data-cap="2"><div class="itemscore" id="score_cargo_dir">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">7</span><span class="sectitle">Conocimiento de idiomas extranjeros o nativos</span><span class="secscore" id="s7badge">0 / 4</span></summary>
+        <div class="sectionbody">
+          <p class="hint">Puntaje por nivel, acreditado por institutos y/o universidades acreditadas. Para evitar duplicación en la simulación, registre cada idioma una sola vez en el nivel que corresponda.</p>
+          <div class="itemgrid"><div class="itemdesc"><b>Nivel avanzado</b><br><span class="hint">2 puntos x c/u · puntaje específico 4</span></div><input class="calc" id="idioma_av" type="number" min="0" step="1" value="0" data-section="7" data-rate="2" data-cap="4"><div class="itemscore" id="score_idioma_av">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Nivel intermedio</b><br><span class="hint">1 punto x c/u · puntaje específico 2</span></div><input class="calc" id="idioma_int" type="number" min="0" step="1" value="0" data-section="7" data-rate="1" data-cap="2"><div class="itemscore" id="score_idioma_int">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Nivel básico</b><br><span class="hint">0,5 puntos x c/u · puntaje específico 1</span></div><input class="calc" id="idioma_bas" type="number" min="0" step="1" value="0" data-section="7" data-rate=".5" data-cap="1"><div class="itemscore" id="score_idioma_bas">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">8</span><span class="sectitle">Actividades de proyección social y extensión cultural</span><span class="secscore" id="s8badge">0 / 2</span></summary>
+        <div class="sectionbody">
+          <p class="hint">Con constancia emitida por la autoridad competente.</p>
+          <div class="itemgrid"><div class="itemdesc"><b>8.1 Vinculadas con los cursos</b><br><span class="hint">0,5 puntos c/u · puntaje específico 1</span></div><input class="calc" id="proy_cursos" type="number" min="0" step="1" value="0" data-section="8" data-rate=".5" data-cap="1"><div class="itemscore" id="score_proy_cursos">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>Ligadas con servicio a la comunidad o desarrollo social</b><br><span class="hint">0,5 punto x c/u · puntaje específico 1</span></div><input class="calc" id="proy_social" type="number" min="0" step="1" value="0" data-section="8" data-rate=".5" data-cap="1"><div class="itemscore" id="score_proy_social">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">9</span><span class="sectitle">Participación en eventos científicos o académicos</span><span class="secscore" id="s9badge">0 / 5</span></summary>
+        <div class="sectionbody">
+          <div class="itemgrid"><div class="itemdesc"><b>9.1 Ponente en eventos internacionales</b><br><span class="hint">1 punto c/u · puntaje específico 3</span></div><input class="calc" id="ev_int" type="number" min="0" step="1" value="0" data-section="9" data-rate="1" data-cap="3"><div class="itemscore" id="score_ev_int">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>9.2 Ponente en eventos nacionales</b><br><span class="hint">0,5 puntos x c/u · puntaje específico 2</span></div><input class="calc" id="ev_nac" type="number" min="0" step="1" value="0" data-section="9" data-rate=".5" data-cap="2"><div class="itemscore" id="score_ev_nac">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>9.3 Panelista en eventos internacionales</b><br><span class="hint">0,25 puntos c/u · puntaje específico 1</span></div><input class="calc" id="ev_panel" type="number" min="0" step="1" value="0" data-section="9" data-rate=".25" data-cap="1"><div class="itemscore" id="score_ev_panel">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>9.4 Organización de Congresos</b><br><span class="hint">0,5 puntos x c/u · puntaje específico 1,5</span></div><input class="calc" id="ev_cong" type="number" min="0" step="1" value="0" data-section="9" data-rate=".5" data-cap="1.5"><div class="itemscore" id="score_ev_cong">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>9.5 Organización de Simposios, cursos, seminarios</b><br><span class="hint">0,25 puntos x c/u · puntaje específico 1</span></div><input class="calc" id="ev_sim" type="number" min="0" step="1" value="0" data-section="9" data-rate=".25" data-cap="1"><div class="itemscore" id="score_ev_sim">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>9.6 Asistente en Eventos Científicos</b><br><span class="hint">0,15 puntos x c/u · puntaje específico 0,6</span></div><input class="calc" id="ev_asist" type="number" min="0" step="1" value="0" data-section="9" data-rate=".15" data-cap=".6"><div class="itemscore" id="score_ev_asist">0 pts</div></div>
+        </div>
+      </details>
+
+      <details class="section">
+        <summary><span class="secnum">10</span><span class="sectitle">Reconocimientos y méritos</span><span class="secscore" id="s10badge">0 / 2</span></summary>
+        <div class="sectionbody">
+          <div class="itemgrid"><div class="itemdesc"><b>10.1 Premio Internacional en su especialidad</b><br><span class="hint">1 punto x c/u · puntaje específico 2</span></div><input class="calc" id="rec_int" type="number" min="0" step="1" value="0" data-section="10" data-rate="1" data-cap="2"><div class="itemscore" id="score_rec_int">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>10.2 Premio Nacional en su especialidad</b><br><span class="hint">0,5 puntos x c/u · puntaje específico 2</span></div><input class="calc" id="rec_nac" type="number" min="0" step="1" value="0" data-section="10" data-rate=".5" data-cap="2"><div class="itemscore" id="score_rec_nac">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>10.3 Miembro de sociedades científicas o instituciones académicas</b><br><span class="hint">0,25 x c/u · puntaje específico 0,5</span></div><input class="calc" id="rec_miembro" type="number" min="0" step="1" value="0" data-section="10" data-rate=".25" data-cap=".5"><div class="itemscore" id="score_rec_miembro">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>10.4 Distinciones académicas o científicas</b><br><span class="hint">0,25 puntos x c/u por universidades y/o instituciones científicas · puntaje específico 0,5</span></div><input class="calc" id="rec_dist" type="number" min="0" step="1" value="0" data-section="10" data-rate=".25" data-cap=".5"><div class="itemscore" id="score_rec_dist">0 pts</div></div>
+          <div class="itemgrid"><div class="itemdesc"><b>10.5 Felicitación o reconocimientos por la Universidad o Instituciones públicas o privadas</b><br><span class="hint">0,25 puntos c/u · puntaje específico 1</span></div><input class="calc" id="rec_fel" type="number" min="0" step="1" value="0" data-section="10" data-rate=".25" data-cap="1"><div class="itemscore" id="score_rec_fel">0 pts</div></div>
+        </div>
+      </details>
+    </div>
+
+    <aside class="scorebox">
+      <section class="card totalcard">
+        <h2>Calificación actual</h2>
+        <div class="total"><span id="total">0.00</span> <small>/ 70</small></div>
+        <div class="progress"><span id="progress"></span></div>
+        <div class="percent"><span id="percent">0</span>% del puntaje máximo</div>
+        <div class="minirows" id="minirows"></div>
+        <div class="actions">
+          <button class="btn primary" onclick="window.print()">Imprimir resumen</button>
+          <button class="btn ghost" onclick="resetAll()">Limpiar</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Resumen por criterio</h2>
+        <div style="overflow-x:auto">
+          <table class="breakdown">
+            <thead><tr><th>Criterio</th><th>Puntaje</th></tr></thead>
+            <tbody id="breakdown"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card printonly">
+        <h2>Datos del postulante</h2>
+        <p><b>Nombre:</b> <span id="p_nombre"></span><br>
+        <b>Condición:</b> <span id="p_condicion"></span><br>
+        <b>Código:</b> <span id="p_codigo"></span><br>
+        <b>Categoría:</b> <span id="p_categoria"></span><br>
+        <b>Departamento:</b> <span id="p_departamento"></span></p>
+      </section>
+    </aside>
+  </div>
+
+  <footer>
+    Fuente utilizada para la programación: Anexo 3 “Tabla de Calificación de Hoja de Vida” proporcionado por el usuario (3 páginas). La calificación generada es referencial y no sustituye la evaluación del jurado calificador.
+  </footer>
+</main>
+
+<script>
+"use strict";
+var SECTION_MAX={1:20,2:7,3:8,4:5,5:14,6:3,7:4,8:2,9:5,10:2};
+var SECTION_NAMES={1:"Grados académicos y títulos",2:"Experiencia profesional",3:"Experiencia docente universitaria",4:"Actualizaciones y capacitaciones",5:"Producción intelectual e investigación",6:"Cargos directivos o apoyo administrativo",7:"Idiomas extranjeros o nativos",8:"Proyección social y extensión cultural",9:"Eventos científicos o académicos",10:"Reconocimientos y méritos"};
+var lastSections={};
+
+function n(id){var e=document.getElementById(id); return Math.max(0,parseFloat(e && e.value)||0);}
+function f(x){return (Math.round((x+Number.EPSILON)*100)/100).toFixed(2);}
+function setScore(id,val){var e=document.getElementById("score_"+id); if(e)e.textContent=f(val)+" pts";}
+
+function ordinaryScores(){
+  var secs={1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0};
+  document.querySelectorAll(".calc[data-section]").forEach(function(el){
+    var s=parseInt(el.dataset.section,10), val=0;
+    if(el.type==="checkbox"){val=el.checked?(parseFloat(el.dataset.fixed)||0):0;}
+    else{
+      var raw=Math.max(0,parseFloat(el.value)||0);
+      val=raw*(parseFloat(el.dataset.rate)||0);
+      if(el.dataset.cap!==undefined) val=Math.min(val,parseFloat(el.dataset.cap));
+    }
+    secs[s]+=val;
+    if(el.id) setScore(el.id,val);
+  });
+
+  var libro52=Math.min(2,n("libros_isbn")*1+n("capitulos_52")*.5);
+  secs[5]+=libro52; document.getElementById("score_libro52").textContent=f(libro52)+" pts";
+
+  var invcul=Math.min(2,n("inv_cul_principal")*1+n("inv_cul_coautor")*.5);
+  secs[5]+=invcul; document.getElementById("score_invcul").textContent=f(invcul)+" pts";
+
+  var inveje=Math.min(1,n("inv_eje_principal")*.5+n("inv_eje_coautor")*.25);
+  secs[5]+=inveje; document.getElementById("score_inveje").textContent=f(inveje)+" pts";
+
+  Object.keys(secs).forEach(function(k){secs[k]=Math.min(SECTION_MAX[k],secs[k]);});
+  return secs;
+}
+
+function calc(){
+  var secs=ordinaryScores(); lastSections=secs;
+  var total=Object.keys(secs).reduce(function(a,k){return a+secs[k];},0);
+  document.getElementById("total").textContent=f(total);
+  var pct=Math.min(100,total/70*100);
+  document.getElementById("percent").textContent=f(pct);
+  document.getElementById("progress").style.width=pct+"%";
+
+  var mini="", rows="";
+  Object.keys(SECTION_MAX).forEach(function(k){
+    var v=secs[k], m=SECTION_MAX[k];
+    document.getElementById("s"+k+"badge").textContent=f(v)+" / "+m;
+    mini+='<div class="minirow"><span>'+k+'. '+SECTION_NAMES[k]+'</span><b>'+f(v)+' / '+m+'</b></div>';
+    rows+='<tr><td>'+k+'. '+SECTION_NAMES[k]+'</td><td>'+f(v)+' / '+m+'</td></tr>';
+  });
+  rows+='<tr><td><b>PUNTAJE TOTAL</b></td><td><b>'+f(total)+' / 70</b></td></tr>';
+  document.getElementById("minirows").innerHTML=mini;
+  document.getElementById("breakdown").innerHTML=rows;
+
+  ["nombre","condicion","codigo","categoria","departamento"].forEach(function(id){
+    var out=document.getElementById("p_"+id), el=document.getElementById(id);
+    if(out&&el)out.textContent=el.value||"—";
+  });
+}
+
+function resetAll(){
+  document.querySelectorAll('input[type="number"]').forEach(function(e){e.value=0;});
+  document.querySelectorAll('input[type="checkbox"]').forEach(function(e){e.checked=false;});
+  document.getElementById("nombre").value="";
+  document.getElementById("codigo").value="";
+  document.getElementById("categoria").value="";
+  document.getElementById("departamento").value="";
+  document.getElementById("condicion").value="Nombramiento Docente";
+  calc();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+document.querySelectorAll("input,select").forEach(function(el){
+  el.addEventListener("input",calc);
+  el.addEventListener("change",calc);
+});
+calc();
+</script>
+</body>
+</html>
